@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    {% endblock %}
+
+{% block title %}
+Home Page View 
+{% endblock %}
+
+{% block content %}
+<h1>Home Page using DTL!</h1>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, mollitia exercitationem sunt corporis dolores distinctio enim esse! Quam sequi officia a? Doloribus eos saepe adipisci enim at beatae vitae quod?</p>
+
+<img width='500' src="{% static 'img/mommy.jpg' %}" alt="Blog Game">
+{% endblock %}
+
+{% block js %}
+<script src = "{% static "js.home.js" %}}"></script>
+{% endblock %}
