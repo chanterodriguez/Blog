@@ -1,0 +1,17 @@
+-- Create venv --
+WIN: py/python -m venv venv
+MacOS: python3 -m venv venv
+
+-- Activate venv --
+WIN: py/python venv\Scripts\activate
+MacOS: source venv/bin/activate
+
+--Install Django --
+WIN: pip Install django
+MacOS: pip3 install django
+
+-- Run App --
+WIN: py/python manage.py
+MacOS: python3 manage.py
+
+python3 manage.py startapp pages
