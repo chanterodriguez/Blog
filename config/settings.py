@@ -125,7 +125,8 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath("static"))]
 
 MAILERS = {
     'default': {
-        'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+        #'BACKEND': 'django.core.mail.backends.console.EmailBackend',
+        'BACKEND': 'config.mail.PlainConsoleEmailBackend',
     },
 }
 
