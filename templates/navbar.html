@@ -18,10 +18,10 @@
         <li class="nav-item">
             <a class="nav-link active" href="{% url 'post_list' %}">Posts</a>
         </li>
+        {% if user.is_authenticated %}
         <li class="nav-item">
             <a class="nav-link active" href="{% url 'post_new' %}">Create Posts</a>
         </li>       
-        {% if user.is_authenticated %}
         <li class="nav-item">
             <a class="nav-link active" href="{% url 'password_change' %}">Change Password</a>
         </li>       
