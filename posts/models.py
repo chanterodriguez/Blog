@@ -9,6 +9,20 @@ from django.urls import reverse
 #   body VARCHAR(125),
 #   age INTEGER
 #)
+
+class Status(models.Model):
+    name = models.CharField(max_length=128, unique=True)
+    description = models.CharField(
+        max_length=200,
+        help_text="Write a description about the status"
+    )
+    class Meta:
+        verbose_name = "Status"
+        verbose_name_plural ="Statuses"
+
+    def __str__(self):
+        return f"Status: {self.name}"
+
 class Post(models.Model):
     title = models.CharField(max_length=128)
     subtitle = models.CharField(max_length=128)
